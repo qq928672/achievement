@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成就系統</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="sidebar">
+                <h3>成就列表</h3>
+                <ul>
+                    <li onclick="showAchievements('角色')">角色 (<span id="character-progress">0/0</span>)</li>
+                    <li onclick="showAchievements('冒險')">冒險 (<span id="adventure-progress">0/0</span>)</li>
+                    <li onclick="showAchievements('戰鬥')">戰鬥 (<span id="combat-progress">0/0</span>)</li>
+                    <li onclick="showAchievements('任務')">任務 (<span id="task-progress">0/0</span>)</li>
+                    <li onclick="showAchievements('社群')">社群 (<span id="community-progress">0/0</span>)</li>
+                    <li onclick="showAchievements('收藏')">收藏 (<span id="collection-progress">0/0</span>)</li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2>成就細節</h2>
+                <div id="achievements-container">
+                    <!-- 成就卡片會被動態插入在這裡 -->
+                </div>
+            </div>
+        </div>
+        <div class="exp-container">
+            <img src="trophy.png" alt="Avatar" class="avatar" id="avatar">
+            <div class="separator"></div>
+            <div class="exp-details">
+                <h4>成就等級: <span id="level">1</span></h4>
+                <div class="exp-bar">
+                    <div class="exp-fill" id="exp-fill"></div>
+                </div>
+                <p>經驗值: <span id="exp">0</span>/100</p>
+            </div>
+        </div>
+    </div>
+
+
+   
+    <script src="script.js"></script>
+
+</body>
+
+</html>
