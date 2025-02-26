@@ -103,27 +103,32 @@ function showAchievements(category) {
 function completeAchievement(index, category) {
     if (category === '角色' && !characterAchievements[index].completed) {
         characterAchievements[index].completed = true;
-        exp += 10;
+        exp += 50;
     } else if (category === '冒險' && !adventureAchievements[index].completed) {
         adventureAchievements[index].completed = true;
-        exp += 10;
+        exp += 50;
     } else if (category === '戰鬥' && !combatAchievements[index].completed) {
         combatAchievements[index].completed = true;
-        exp += 10;
+        exp += 50;
     } else if (category === '任務' && !taskAchievements[index].completed) {
         taskAchievements[index].completed = true;
-        exp += 10;
+        exp += 50;
     } else if (category === '社群' && !communityAchievements[index].completed) {
         communityAchievements[index].completed = true;
-        exp += 10;
+        exp += 50;
     } else if (category === '收藏' && !collectionAchievements[index].completed) {
         collectionAchievements[index].completed = true;
-        exp += 10;
+        exp += 50;
     }
 
     if (exp >= 100) {
         exp -= 100;
         level++;
+
+        // **播放升等音效**
+        let levelUpSound = new Audio("bright.mp3"); 
+        levelUpSound.play(); 
+
         document.getElementById("level").innerText = level;
     }
     document.getElementById("exp").innerText = exp;
