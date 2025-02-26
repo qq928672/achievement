@@ -12,13 +12,8 @@ characterAchievements = [
     { title: "升到10等", completed: false },
     { title: "升到15等", completed: false },
     { title: "升到20等", completed: false },
-
-    { title: "升到20等", completed: false },
-
-    { title: "升到20等", completed: false },
-
-    { title: "升到20等", completed: false },
-
+    { title: "升到25等", completed: false },
+    { title: "升到30等", completed: false },
 ];
 
 adventureAchievements = [
